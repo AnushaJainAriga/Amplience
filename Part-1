@@ -1,0 +1,23 @@
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+pm.test("Body matches string", function () {
+    pm.expect(pm.response.text()).to.include("Gregory Loscombe");
+});
+pm.test("Body matches string", function () {
+    pm.expect(pm.response.text()).to.include("Manchester");
+});
+ 
+pm.test("Response contains expected fields", function () {
+    const response = pm.response.json();
+    pm.expect(response).to.have.property("id",15330);
+    pm.expect(response).to.have.property("public_repos", 7);
+    pm.expect(response).to.have.property("public_gists", 11);
+    pm.expect(response).to.have.property("followers", 15);
+    pm.expect(response).to.have.property("following", 29); 
+});
+ 
+pm.test("Content-Type header is present", function () {
+    pm.response.to.have.header("Content-Type");
+});
+
