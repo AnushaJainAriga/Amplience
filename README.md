@@ -19,7 +19,7 @@ PART 2
  
 Test Steps:
 1. Launch the Selenium IDE
-2. Start a ne project
+2. Start a new project
 3. Add URL https://github.com/6wl
 4. URL opens up on the browser
 5. Check for Name/Tile: Gregory Loscombe
